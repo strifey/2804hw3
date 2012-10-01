@@ -2,8 +2,9 @@
 
 using std::string;
 using std::istream;
+using std::unique_ptr;
 
-using namespace hw3{
+namespace hw3{
 	static unique_ptr<Region>  Region::makeRegionFrom(istream& inptr){
 		
 	}

@@ -4,13 +4,16 @@
 #include <string>
 #include <iostream>
 #include <cmath>
+#include <vector>
+#include <memory>
+#include "customer.h"
 
-using namespace hw3{
+namespace hw3{
 	class Region{
 		public:
 			std::string name;
-			vector<Customer> customer;
-			static unique_ptr<Region>  Region::makeRegionFrom(std::istream& inptr);
+			std::vector<std::unique_ptr<Customer>> customers;
+			static std::unique_ptr<Region>  makeRegionFrom(std::istream& inptr);
 	};
 }
 #endif
