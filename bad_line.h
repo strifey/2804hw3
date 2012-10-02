@@ -6,9 +6,9 @@
 
 namespace hw3{
 	class bad_line: public std::exception{
-		virtual bad_line(){}
-		
-		virtual ~bad_line(){}
+		public:
+			bad_line(){}
+			virtual const inline std::string what() noexcept {return "Bad line formatting in file\n";};	
 	};
 }
 

@@ -11,9 +11,12 @@
 
 namespace hw3{
 	class Company{
+		private:
+			std::string _name;
+			std::vector<std::unique_ptr<Region>> _regions;
 		public:
-			std::string name;
-			std::vector<std::unique_ptr<Region>> regions;
+			Company(std::string name, std::vector<std::unique_ptr<Region>> regions)
+				:_name(name), _regions(std::move(regions)){}
 			static std::unique_ptr<Company> makeCompanyFrom(std::string filename);
 			void generate_report();
 	};
