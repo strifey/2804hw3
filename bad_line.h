@@ -8,7 +8,7 @@ namespace hw3{
 	class bad_line: public std::exception{
 		public:
 			bad_line(){}
-			virtual const inline std::string what() noexcept {return "Bad line formatting in file\n";};	
+			inline std::string what() noexcept {return "Bad line formatting in file\n";};	
 	};
 }
 

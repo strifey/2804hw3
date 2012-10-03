@@ -2,6 +2,7 @@
 #define COMPANY_H
 
 #include <iostream>
+#include <fstream>
 #include <string>
 #include <cmath>
 #include <memory>
@@ -17,7 +18,7 @@ namespace hw3{
 		public:
 			Company(std::string name, std::vector<std::unique_ptr<Region>> regions)
 				:_name(name), _regions(std::move(regions)){}
-			static std::unique_ptr<Company> makeCompanyFrom(std::string filename);
+			static std::unique_ptr<Company> makeCompanyFrom(std::string filename, std::string c_name);
 			void generate_report();
 	};
 }
