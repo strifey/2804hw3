@@ -19,8 +19,8 @@ namespace hw3{
 			//TODO handle exceptions correctly
 			try{
 				n_customers.push_back(Customer::makeCustomerFromLine(cu_line));
-			}catch(bad_line ble){
-				cout<<"Caught on: " << cu_line <<endl;
+			}
+			catch(const bad_line& ble){
 				continue;
 			}
 			getline(inptr, cu_line);

@@ -15,7 +15,7 @@ namespace hw3 {
 		string input[6];
 		for(int i = 0; i<6; i++){
 			if(iss.eof())
-				throw new bad_line();
+				throw bad_line();
 			getline(iss, input[i], ',');
 		}
 		int id;
@@ -25,19 +25,19 @@ namespace hw3 {
 		c_id<<hex<<input[0];
 		c_id>>id;
 		if(c_id.fail())
-			throw new bad_line();
+			throw bad_line();
 
 		stringstream c_num;
 		c_num<<input[4];
 		c_num>>sales_num;
 		if(c_num.fail())
-			throw new bad_line();
+			throw bad_line();
 
 		stringstream c_p;
 		c_p<<input[5];
 		c_p>>sales_p;
 		if(c_p.fail())
-			throw new bad_line();
+			throw bad_line();
 		sales_p*=100;
 
 		ostringstream fullname;
